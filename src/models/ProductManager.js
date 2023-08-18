@@ -67,7 +67,8 @@ class ProductManager {
   async deleteProduct(id) {
     const products = await this.readFile();
 
-    const updatedProducts = products.filter((p) => p.id !== parseInt(id));
+    const updatedProducts = products.filter((p) => p.id !== 
+    parseInt(id));
 
     if (updatedProducts.length === products.length) {
       throw new Error('Producto no encontrado');
